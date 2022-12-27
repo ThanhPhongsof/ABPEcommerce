@@ -1,7 +1,7 @@
 ﻿using System;
 using Volo.Abp.Domain.Entities.Auditing;
 
-namespace ABPEcommerce.Inventory
+namespace ABPEcommerce.Inventories
 {
     public class Inventory : AuditedAggregateRoot<Guid>
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using Volo.Abp.Domain.Entities;
 
-namespace ABPEcommerce.Domain.Products
+namespace ABPEcommerce.Products
 {
-    public class ProductAttributeint : Entity<Guid>
+    public class ProductAttributeInt : Entity<Guid>
     {
         public Guid AttributeId { get; set; }
         public Guid ProductId { get; set; }

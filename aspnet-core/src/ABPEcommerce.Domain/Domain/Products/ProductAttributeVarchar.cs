@@ -2,7 +2,7 @@
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Entities.Auditing;
 
-namespace ABPEcommerce.Domain.Products
+namespace ABPEcommerce.Products
 {
     public class ProductAttributeVarchar : Entity<Guid>
     {
