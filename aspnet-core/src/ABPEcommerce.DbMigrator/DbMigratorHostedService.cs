@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using ABPEcommerce.Data;
 using Serilog;
 using Volo.Abp;
+using ABPEcommerce.Seeding;
 
 namespace ABPEcommerce.DbMigrator;
 
@@ -24,9 +25,9 @@ public class DbMigratorHostedService : IHostedService
     {
         using (var application = await AbpApplicationFactory.CreateAsync<ABPEcommerceDbMigratorModule>(options =>
         {
-           options.Services.ReplaceConfiguration(_configuration);
-           options.UseAutofac();
-           options.Services.AddLogging(c => c.AddSerilog());
+            options.Services.ReplaceConfiguration(_configuration);
+            options.UseAutofac();
+            options.Services.AddLogging(c => c.AddSerilog());
         }))
         {
             await application.InitializeAsync();
@@ -35,6 +36,11 @@ public class DbMigratorHostedService : IHostedService
                 .ServiceProvider
                 .GetRequiredService<ABPEcommerceDbMigrationService>()
                 .MigrateAsync();
+
+            await application
+                .ServiceProvider
+                .GetRequiredService<IdentityDataSeeder>()
+                .SeedAsync("phong.tranthanh@2359media.com", "Abc@123$");
 
             await application.ShutdownAsync();
 
