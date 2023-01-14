@@ -3,8 +3,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:44342",
-      "sslPort": 44342
+      "applicationUrl": "https://localhost:44365",
+      "sslPort": 44365
     }
   },
   "profiles": {
@@ -15,10 +15,10 @@
     //    "ASPNETCORE_ENVIRONMENT": "Development"
     //  }
     //},
-    "ABPEcommerce.AuthServer": {
+    "ABPEcommerce.HttpApi.Host": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5000",
+      "applicationUrl": "https://localhost:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

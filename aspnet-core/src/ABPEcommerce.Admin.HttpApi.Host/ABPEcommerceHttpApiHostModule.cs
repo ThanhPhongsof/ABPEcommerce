@@ -229,7 +229,7 @@ public class ABPEcommerceHttpApiHostModule : AbpModule
 
             var configuration = context.GetConfiguration();
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
-            options.OAuthScopes("ABPEcommerce");
+            options.OAuthScopes("ABPEcommerce.Admin");
         });
 
         app.UseAuditing();
