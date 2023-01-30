@@ -33,7 +33,7 @@ namespace ABPEcommerce.Admin.Products
             return new PagedResultDto<ProductInListDto>(totalCount, ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data));
         }
 
-        public async Task<List<ProductInListDto>> GetListFilterAsync()
+        public async Task<List<ProductInListDto>> GetListAllAsync()
         {
             var query = await Repository.GetQueryableAsync();
             query = query.Where(x => x.isActive == true);

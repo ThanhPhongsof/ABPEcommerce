@@ -11,7 +11,7 @@ namespace ABPEcommerce.Admin.Products
     {
         Task<PagedResultDto<ProductInListDto>> GetListFilterAsync(BaseListFilterDto input);
 
-        Task<List<ProductInListDto>> GetListFilterAsync();
+        Task<List<ProductInListDto>> GetListAllAsync();
 
         Task DeleteMultipleAsync(IEnumerable<Guid> ids);
     }
